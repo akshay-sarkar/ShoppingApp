@@ -14,12 +14,26 @@ Ext.application({
     name: 'ShoppingApp',
 
     requires: [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+		'Ext.form.FieldSet',
+		'Ext.field.Password'
     ],
 
     views: [
-        'Main'
+        'Login','Main'
     ],
+	
+	controllers: [
+		'LoginController'
+	],
+	
+	models: [
+		'ShopItem'
+	],
+	
+	stores: [
+		'ShopItems'
+	],
 
     icon: {
         '57': 'resources/icons/Icon.png',
@@ -44,7 +58,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('ShoppingApp.view.Main'));
+        Ext.Viewport.add(Ext.create('ShoppingApp.view.Login'));
     },
 
     onUpdated: function() {

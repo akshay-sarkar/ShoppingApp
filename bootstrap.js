@@ -771,6 +771,10 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "ShoppingApp.controller.LoginController": [],
+  "ShoppingApp.model.ShopItem": [],
+  "ShoppingApp.store.ShopItems": [],
+  "ShoppingApp.view.Login": [],
   "ShoppingApp.view.Main": []
 });
 
@@ -1727,6 +1731,12 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "ShoppingApp.controller.LoginController": [],
+  "ShoppingApp.model.ShopItem": [],
+  "ShoppingApp.store.ShopItems": [],
+  "ShoppingApp.view.Login": [
+    "widget.login"
+  ],
   "ShoppingApp.view.Main": [
     "widget.main"
   ]
