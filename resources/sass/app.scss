@@ -11,5 +11,17 @@
 @include icon('user');
 
 .textAlignCenter{
-text-align : center ;
+	text-align : center ;
+}
+.box{
+	float: left;
+	vertical-align: top;
+	margin-left:15px;
+}
+.title{
+	  font-size: xx-large;
+}
+.boxRight{
+	float: right;
+	vertical-align: top;
 }
