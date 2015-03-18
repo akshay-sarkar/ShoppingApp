@@ -11,19 +11,19 @@ Still Under Development..
 
 Flow from user authentication to cart management and purchase by providing delivery address.
 
-Features covered:-
-#16/03/2015
+#Features covered:-
+@16/03/2015
 - Login Screen View
 - Login Controller to check credentials or validate  user.
 - Template for Main Screen
 
-#18/03/2015
+@18/03/2015
 - Rendering 2 list: 
   1) exclusive/offer list
   2) show all list
 
 
-Feature coming:
+#Feature coming:
 
 - Adding Cart Screen
 - Cart managment (Add/Remove/Qty Update)
