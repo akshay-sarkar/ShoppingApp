@@ -28,11 +28,11 @@ Ext.application({
 	],
 	
 	models: [
-		'ShopItem'
+		'ShopItem', 'CartItem'
 	],
 	
 	stores: [
-		'ShopItems'
+		'ShopItems', 'CartItems'
 	],
 
     icon: {
