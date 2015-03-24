@@ -12,7 +12,6 @@ Ext.define('ShoppingApp.view.Main', {
                 pack : 'left'
             }
         },
-
         items: [
             {
                 title: 'Exclusive Item',
@@ -24,6 +23,8 @@ Ext.define('ShoppingApp.view.Main', {
 						height: '100%',
 						itemId: 'exclusiveItems',
 						store: 'shopItems',
+						selectedCls: '',
+						pressedCls:'',
 						itemTpl: '<div style="height:100px;">'+
 									'<image src={imageUrl} height="100" width="100" style="float:left;">'+
 									'<div class="box">'+
@@ -31,7 +32,8 @@ Ext.define('ShoppingApp.view.Main', {
 										'<div class="price"> ${price}</div>'+
 									'</div>'+
 									'<div class="boxRight">'+
-										'Qty <input type="number" value="0" min="0" max="10"/>'+
+										'<input type="number" value="0" min="0" max="10"/>'+
+										'<input type="button" value="Add" class="x-button-action x-button" style="display: inline;margin: 1.5em;border: #a6a6a6;"/>'+
 									'</div>'+
 								 '</div>'
                     }
@@ -92,7 +94,7 @@ Ext.define('ShoppingApp.view.Main', {
 										'<div class="price"> ${price}</div>'+
 									'</div>'+
 									'<div class="boxRight">'+
-										'Quantity : {qty} and Cost : {price}'+
+										'Quantity : {qty} and Cost/Qty : {price}'+
 									'</div>'+
 								 '</div>'
                     }
