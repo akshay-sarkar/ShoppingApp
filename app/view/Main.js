@@ -17,11 +17,12 @@ Ext.define('ShoppingApp.view.Main', {
             {
                 title: 'Exclusive Item',
                 iconCls: 'favorites',
-
+				itemId: 'exclusivePage',
                 items: [
                     {
 						xtype: 'list',
 						height: '100%',
+						itemId: 'exclusiveItems',
 						store: 'shopItems',
 						itemTpl: '<div style="height:100px;">'+
 									'<image src={imageUrl} height="100" width="100" style="float:left;">'+
@@ -45,11 +46,14 @@ Ext.define('ShoppingApp.view.Main', {
             {
                 title: 'Show All',
                 iconCls: 'home',
-
+				itemId: 'allPage',
                 items: [
                     {
 						xtype: 'list',
 						height: '100%',
+						itemId: 'allItems',
+						selectedCls: '',
+						pressedCls:'',
 						store: 'shopItems',
 						itemTpl: '<div style="height:100px;">'+
 									'<image src={imageUrl} height="100" width="100" style="float:left;">'+
@@ -58,7 +62,8 @@ Ext.define('ShoppingApp.view.Main', {
 										'<div class="price"> ${price}</div>'+
 									'</div>'+
 									'<div class="boxRight">'+
-										'Qty <input type="number" value="0" min="0" max="10" />'+
+										'<input type="number" value="0" min="0" max="10"/>'+
+										'<input type="button" value="Add" class="x-button-action x-button" style="display: inline;margin: 1.5em;border: #a6a6a6;"/>'+
 									'</div>'+
 								 '</div>'
                     }
@@ -74,7 +79,7 @@ Ext.define('ShoppingApp.view.Main', {
                 title: 'Cart',
                 iconCls: 'action',
 				iconAlign: 'right',
-
+				itemId: 'cartPage',
                 items: [
                     {
 						xtype: 'list',
@@ -87,7 +92,7 @@ Ext.define('ShoppingApp.view.Main', {
 										'<div class="price"> ${price}</div>'+
 									'</div>'+
 									'<div class="boxRight">'+
-										'Qty <input type="number" value="0" min="0" max="10" />'+
+										'Quantity : {qty} and Cost : {price}'+
 									'</div>'+
 								 '</div>'
                     }

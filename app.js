@@ -9,6 +9,12 @@
     changes and its generated code, it will produce a "merge conflict" that you
     will need to resolve manually.
 */
+Ext.Loader.setConfig({
+    disableCaching : false,
+    paths          : {
+        'Constant' : 'app/lib/Constants.js'
+    }
+});
 
 Ext.application({
     name: 'ShoppingApp',
@@ -16,7 +22,8 @@ Ext.application({
     requires: [
         'Ext.MessageBox',
 		'Ext.form.FieldSet',
-		'Ext.field.Password'
+		'Ext.field.Password',
+		'Constant'
     ],
 
     views: [
@@ -24,7 +31,7 @@ Ext.application({
     ],
 	
 	controllers: [
-		'LoginController'
+		'LoginController', 'MainController'
 	],
 	
 	models: [

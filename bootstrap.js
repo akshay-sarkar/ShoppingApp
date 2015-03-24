@@ -9,6 +9,7 @@
  * metadata-driven class system features
  */
 Ext.Loader.addClassPathMappings({
+  "Constant": "app/lib/Constants.js",
   "Ext": "touch/src",
   "Ext-more": "touch/src/core/Ext-more.js",
   "Ext.Boot": ".sencha/app/Boot.js",
@@ -33,10 +34,12 @@ Ext.Loader.addClassPathMappings({
   "Ext.device.sqlite.SQLResultSetRowList": "touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLTransaction": "touch/src/device/sqlite/Sencha.js",
   "Ext.draw.engine.SvgContext.Gradient": "touch/src/draw/engine/SvgContext.js",
-  "ShoppingApp": "app"
+  "ShoppingApp": "app",
+  "ShoppingApp.store.CartItems": "app/store/Cartitems.js"
 });
 
 Ext.ClassManager.addNameAlternateMappings({
+  "Constant": [],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
   "Ext.AbstractPlugin": [],
@@ -761,13 +764,17 @@ Ext.ClassManager.addNameAlternateMappings({
     "Ext.viewport.WP"
   ],
   "ShoppingApp.controller.LoginController": [],
+  "ShoppingApp.controller.MainController": [],
+  "ShoppingApp.model.CartItem": [],
   "ShoppingApp.model.ShopItem": [],
+  "ShoppingApp.store.CartItems": [],
   "ShoppingApp.store.ShopItems": [],
   "ShoppingApp.view.Login": [],
   "ShoppingApp.view.Main": []
 });
 
 Ext.ClassManager.addNameAliasMappings({
+  "Constant": [],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
   "Ext.AbstractPlugin": [],
@@ -1710,7 +1717,10 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
   "ShoppingApp.controller.LoginController": [],
+  "ShoppingApp.controller.MainController": [],
+  "ShoppingApp.model.CartItem": [],
   "ShoppingApp.model.ShopItem": [],
+  "ShoppingApp.store.CartItems": [],
   "ShoppingApp.store.ShopItems": [],
   "ShoppingApp.view.Login": [
     "widget.login"
