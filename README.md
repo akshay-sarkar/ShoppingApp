@@ -6,8 +6,7 @@ Credentials for using app :-
 Username : shopper
 password : shopper123
 
-This is a shopping application developed using Sencha Touch for cross platform support.
-Still Under Development.. 
+This is a shopping application developed using Sencha Touch for cross platform support, under Development phase.. 
 
 Flow from user authentication to cart management and purchase by providing delivery address.
 
