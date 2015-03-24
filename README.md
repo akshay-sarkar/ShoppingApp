@@ -22,9 +22,17 @@ Flow from user authentication to cart management and purchase by providing deliv
   1) exclusive/offer list
   2) show all list
 
+@22/03/2015
+- Added Cart Store
+
+@25/03/2015
+- Added Button in List to add item in cart
+- Cart List Rendering
+- UI Improvement
 
 #Feature coming:
 
-- Adding Cart Screen
 - Cart managment (Add/Remove/Qty Update)
 - Providing Delivery Details with COD options.
+- UI Improvement
+- Feature Testing
