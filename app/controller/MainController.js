@@ -12,7 +12,13 @@ Ext.define('ShoppingApp.controller.MainController', {
 			'list[itemId="cartList"]': {
 				itemtap: 'itemUpdate'
 			},
+			'button[itemId=removeAllCart]':{
+				tap: 'emptyCart'	
+			}
 		},
+		refs: {
+            removeAllCartButton: 'button[itemId=removeAllCart]', //using xtype itemId
+        }
 	},
 	itemAdding: function(list, index, target, record, evt) {
 		var type = evt.event.target.type || '';
@@ -52,5 +58,10 @@ Ext.define('ShoppingApp.controller.MainController', {
 		    //var tab = Ext.getCmp('ext-tabbar-1').down('.tab[title=Cart]');
 		    //tab.setBadgeText(Constant.num);
 		}
+	},
+	emptyCart: function(){
+		console.log('emptty cart');
+		var cartItems = Ext.getStore('cartItems');
+		cartItems.removeAll();
 	}
 });

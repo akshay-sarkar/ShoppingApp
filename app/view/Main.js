@@ -110,7 +110,8 @@ Ext.define('ShoppingApp.view.Main', {
 			            items: [
 			            		{
 						            text: 'Remove All',
-						            align: 'left'
+						            align: 'left',
+						            itemId: 'removeAllCart'
 						        },
 						        {
 						            text: 'Proceed to Pay',
