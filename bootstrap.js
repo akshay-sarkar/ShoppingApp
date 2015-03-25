@@ -34,7 +34,8 @@ Ext.Loader.addClassPathMappings({
   "Ext.device.sqlite.SQLResultSetRowList": "touch/src/device/sqlite/Sencha.js",
   "Ext.device.sqlite.SQLTransaction": "touch/src/device/sqlite/Sencha.js",
   "Ext.draw.engine.SvgContext.Gradient": "touch/src/draw/engine/SvgContext.js",
-  "ShoppingApp": "app"
+  "ShoppingApp": "app",
+  "ShoppingApp.store.CartItems": "app/store/Cartitems.js"
 });
 
 Ext.ClassManager.addNameAlternateMappings({
