@@ -87,6 +87,9 @@ Ext.define('ShoppingApp.view.Main', {
 						xtype: 'list',
 						height: '100%',
 						store: 'cartItems',
+						itemId: 'cartList',
+						selectedCls: '',
+						pressedCls:'',
 						itemTpl: '<div style="height:100px;">'+
 									'<image src={imageUrl} height="100" width="100" style="float:left;">'+
 									'<div class="box">'+
@@ -94,10 +97,27 @@ Ext.define('ShoppingApp.view.Main', {
 										'<div class="price"> ${price}</div>'+
 									'</div>'+
 									'<div class="boxRight">'+
-										'Quantity : {qty} and Cost/Qty : {price}'+
+										'<div>Quantity <input type="number" value="{qty}" min="1" max="10"/>'+
+										'<input type="button" value="Update" class="x-button-action x-button" style="display: inline;margin: 0.5em;border: #a6a6a6;"/>  <br></div>'+
+										'<div class="price" style="margin-top: 10px;"> Subtotal : {subtotal}</div>'+
 									'</div>'+
 								 '</div>'
-                    }
+                    },
+                    {
+			            xtype : 'titlebar',
+			            docked: 'bottom',
+			            title: 'Total Amount',
+			            items: [
+			            		{
+						            text: 'Remove All',
+						            align: 'left'
+						        },
+						        {
+						            text: 'Proceed to Pay',
+						            align: 'right'
+						        }
+			            ]
+			        },
                 ],
 				listeners:{
 					// show: function( e, eOpts ){
