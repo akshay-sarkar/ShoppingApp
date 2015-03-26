@@ -106,7 +106,8 @@ Ext.define('ShoppingApp.view.Main', {
                     {
 			            xtype : 'titlebar',
 			            docked: 'bottom',
-			            title: 'Total Amount',
+			            title: 'Total Amount : '+ Constant.total,
+			            itemId: 'totalAmount',
 			            items: [
 			            		{
 						            text: 'Remove All',
