@@ -35,3 +35,11 @@ Flow from user authentication to cart management and purchase by providing deliv
 - Providing Delivery Details with COD options.
 - UI Improvement
 - Feature Testing
+
+#Issue Exist
+ - total amount not getting updated.
+ - badge text not getting update.
+ - Proceed to pay Screen :
+    i)Includes Form
+    ii)Validate Form
+ -Final UI touch Up
