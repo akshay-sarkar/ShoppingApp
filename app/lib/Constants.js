@@ -2,7 +2,9 @@ Ext.define('Constant', {
     statics     : {
 		VERSION : '0.2',
 		num : 0,
-		total: 0
+		total: 0,
+		store: {},
+		uiComponents: {}
 	},
     constructor : function(config) {
         this.initConfig(config);

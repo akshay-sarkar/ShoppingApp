@@ -5,7 +5,7 @@ Ext.define('ShoppingApp.store.CartItems', {
 		model: 'ShoppingApp.model.CartItem',
 		listeners : {
 			addrecords : function( store, records, eOpts ){
-				console.log(' 2 --	data added successfully');
+				console.log('data added successfully');
 			},
 			updaterecord : function( store, record, newIndex, oldIndex, modifiedFieldNames, modifiedValues, eOpts ){
 				console.log('data updated successfully');

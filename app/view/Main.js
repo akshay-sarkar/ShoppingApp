@@ -98,8 +98,9 @@ Ext.define('ShoppingApp.view.Main', {
 									'</div>'+
 									'<div class="boxRight">'+
 										'<div>Quantity <input type="number" value="{qty}" min="1" max="10"/>'+
-										'<input type="button" value="Update" class="x-button-action x-button" style="display: inline;margin: 0.5em;border: #a6a6a6;"/>  <br></div>'+
-										'<div class="price" style="margin-top: 10px;"> Subtotal : {subtotal}</div>'+
+										'<input type="button" id="update" value="Update" class="x-button-action x-button" style="display: inline;margin: 0.5em;border: #a6a6a6;"/>  <br></div>'+
+										'<div style="margin-top: 10px;"> Subtotal : {subtotal}'+
+										'<input type="button" id="remove" value="Remove Item" class="x-button-action x-button" style="display: inline;margin: 0.5em;border: #a6a6a6;"/>  <br></div>'+
 									'</div>'+
 								 '</div>'
                     },
@@ -120,14 +121,16 @@ Ext.define('ShoppingApp.view.Main', {
 						        }
 			            ]
 			        },
-                ],
-				listeners:{
-					// show: function( e, eOpts ){
-						// var store = Ext.getStore('cartItems');
-						// store.clearFilter();
-					// }
-				}
+                ]
             }
-        ]
+        ],
+		listeners:{
+			 show: function( e, eOpts ){
+				console.log('show called');
+				// -------- Performance Optimization ---------
+				Constant.uiComponents.cartTab = Ext.getCmp('ext-tabbar-1').down('.tab[title=Cart]');
+				Constant.uiComponents.totalAmount = Ext.ComponentQuery.query('#totalAmount');
+			 }
+		}
     }
 });

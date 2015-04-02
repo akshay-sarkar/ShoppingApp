@@ -28,7 +28,8 @@ Ext.define('ShoppingApp.controller.MainController', {
                 Ext.Msg.alert('Add Item','Please set the quantity !!');
             }else{
                 // Getting Store Referenece
-                var cartItems = Ext.getStore('cartItems');
+                var cartItems = Constant.store.cartItems;
+               
                 /* Check if record exist , getIndex*/
                 var index = cartItems.find('productType', record.get('productType'));
                 /*
@@ -55,25 +56,33 @@ Ext.define('ShoppingApp.controller.MainController', {
                     /* Adding record to cart Items , if doesn't exist*/         
                     cartItems.add({'productType': record.get('productType'), 'imageUrl':record.get('imageUrl') , 'price': record.get('price'), 'qty': num.value, 'subtotal': (num.value*record.get('price'))});
                 }
-                console.log('1');
+
                 // Updating badge count
                 Constant.num += parseInt(num.value);
                 Constant.total += subtotal;
 
-                // Updating Badge Text of tab-Panel
-                var tab = Ext.getCmp('ext-tabbar-1').down('.tab[title=Cart]');
+                // Updating Badge Text of tab-Panel               
+                var tab = Constant.uiComponents.cartTab;
                 tab.setBadgeText(Constant.num);
 
                 // Updating Total Amount
-                var item = Ext.ComponentQuery.query('#totalAmount');
-                console.log(item[0].getTitle());
-                item[0].setTitle('Total Amount : '+ Constant.total + '$');
+                var totalAmountCmp = Constant.uiComponents.totalAmount;
+                totalAmountCmp[0].setTitle('Total Amount : '+ Constant.total + '$');
+
+                // After adding to cart set back the value to 0
+                num.value = 0;
+
+
+                /*var a = performance.now();
+                var b = performance.now();
+                console.log('It took ' + (b - a) + ' ms.');*/
             }           
         }
     },
     itemUpdate: function(list, index, target, record, evt) {
         var type = evt.event.target.type || '';
-        if(type == 'button') {
+        var id = evt.event.target.id || '';
+        if(type == 'button' && id=='update') {
             var num = evt.event.target.previousElementSibling;
             // getting previous qty
             var prvQty = parseInt(record.get('qty'));
@@ -93,18 +102,53 @@ Ext.define('ShoppingApp.controller.MainController', {
             Constant.num += (parseInt(num.value) - prvQty);
 
             // Updating Badge Text of tab-Panel
-            var tab = Ext.getCmp('ext-tabbar-1').down('.tab[title=Cart]');
+            var tab = Constant.uiComponents.cartTab;
             tab.setBadgeText(Constant.num);
 
             // Updating Total Amount
-            var item = Ext.ComponentQuery.query('#totalAmount');
-            console.log(item[0].getTitle());
-            item[0].setTitle('Total Amount : '+ Constant.total + '$');
+            var totalAmountCmp = Constant.uiComponents.totalAmount;
+            totalAmountCmp[0].setTitle('Total Amount : '+ Constant.total + '$');
+        }
+        else if(type == 'button' && id=='remove') {
+            console.log('remove this item');
+            // getting previous qty
+            var prvQty = parseInt(record.get('qty'));
+
+            // getting previos subtotal
+            var  prvSubtotal = record.get('subtotal');
+
+            // Updating total
+            Constant.total = (Constant.total - prvSubtotal);
+
+            // Updating badge count
+            Constant.num = (Constant.num - prvQty);
+
+             // Updating Badge Text of tab-Panel
+            var tab = Constant.uiComponents.cartTab;
+            tab.setBadgeText(Constant.num);
+
+            // Updating Total Amount
+            var totalAmountCmp = Constant.uiComponents.totalAmount;
+            totalAmountCmp[0].setTitle('Total Amount : '+ Constant.total + '$');
+
+            // Getting Store Referenece
+            var cartItems = Constant.store.cartItems;
+            cartItems.remove(record);
         }
     },
     emptyCart: function(){
-        console.log('emptty cart');
+        console.log('empty cart');
         var cartItems = Ext.getStore('cartItems');
         cartItems.removeAll();
+
+        // Updating Badge Text of tab-Panel
+        Constant.num = 0;
+        var tab = Constant.uiComponents.cartTab;
+        tab.setBadgeText(Constant.num);
+
+        // Updating Total Amount
+        Constant.total = 0;
+        var totalAmountCmp = Constant.uiComponents.totalAmount;
+        totalAmountCmp[0].setTitle('Total Amount : '+ Constant.total + '$');
     }
 });

@@ -61,6 +61,11 @@ Ext.application({
     },
 
     launch: function() {
+        console.log('launched app');
+        // -------- Performance Optimization ---------
+        Constant.store.cartItems = Ext.getStore('cartItems');
+        //Constant.uiComponents.cartTab = Ext.getCmp('ext-tabbar-1').down('.tab[title=Cart]');
+
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
 
