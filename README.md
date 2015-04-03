@@ -29,9 +29,14 @@ Flow from user authentication to cart management and purchase by providing deliv
 - Cart List Rendering
 - UI Improvement
 
-#Feature coming:
-
+@03/04/2015
 - Cart managment (Add/Remove/Qty Update)
+- Code optimization
+
+@04/04/2015
 - Providing Delivery Details with COD options.
-- UI Improvement
-- Feature Testing
+- UI Improvement and business logic
+
+Few Small Issue needs to be be cover up.
+
+Please give input guys !!
