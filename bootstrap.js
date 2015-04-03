@@ -769,6 +769,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "ShoppingApp.model.ShopItem": [],
   "ShoppingApp.store.CartItems": [],
   "ShoppingApp.store.ShopItems": [],
+  "ShoppingApp.view.CompleteOrder": [],
   "ShoppingApp.view.Login": [],
   "ShoppingApp.view.Main": []
 });
@@ -1722,6 +1723,9 @@ Ext.ClassManager.addNameAliasMappings({
   "ShoppingApp.model.ShopItem": [],
   "ShoppingApp.store.CartItems": [],
   "ShoppingApp.store.ShopItems": [],
+  "ShoppingApp.view.CompleteOrder": [
+    "widget.completeorder"
+  ],
   "ShoppingApp.view.Login": [
     "widget.login"
   ],

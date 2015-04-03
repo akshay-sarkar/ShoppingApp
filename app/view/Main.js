@@ -117,7 +117,8 @@ Ext.define('ShoppingApp.view.Main', {
 						        },
 						        {
 						            text: 'Proceed to Pay',
-						            align: 'right'
+						            align: 'right',
+						            itemId: 'ProceedPay'
 						        }
 			            ]
 			        },
@@ -130,6 +131,13 @@ Ext.define('ShoppingApp.view.Main', {
 				// -------- Performance Optimization ---------
 				Constant.uiComponents.cartTab = Ext.getCmp('ext-tabbar-1').down('.tab[title=Cart]');
 				Constant.uiComponents.totalAmount = Ext.ComponentQuery.query('#totalAmount');
+
+			 	// Creating Proceed to pay panel
+			 	if(!Constant.uiComponentsExist.CompleteOrder){
+					var panel = Ext.create('ShoppingApp.view.CompleteOrder'); // Creating View
+        			Ext.Viewport.add(panel); // Adding View to Viewport
+        			Constant.uiComponentsExist.CompleteOrder = true;
+        		}
 			 }
 		}
     }

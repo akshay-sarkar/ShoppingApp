@@ -16,7 +16,7 @@
 .box{
 	float: left;
 	vertical-align: top;
-	margin-left:15px;
+	margin-left: 15px;
 }
 .title{
 	  font-size: xx-large;
@@ -25,3 +25,11 @@
 	float: right;
 	vertical-align: top;
 }
+.x-dataview-item{
+	margin: .5em 1em 0em 1em !important;
+}
+
+.x-scroll-indicator-x{
+	visibility: hidden;
+}
+

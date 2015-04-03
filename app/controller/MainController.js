@@ -14,6 +14,9 @@ Ext.define('ShoppingApp.controller.MainController', {
             },
             'button[itemId=removeAllCart]':{
                 tap: 'emptyCart'    
+            },
+            'button[itemId=ProceedPay]':{
+                tap: 'proceedToPay'    
             }
         },
         refs: {
@@ -150,5 +153,11 @@ Ext.define('ShoppingApp.controller.MainController', {
         Constant.total = 0;
         var totalAmountCmp = Constant.uiComponents.totalAmount;
         totalAmountCmp[0].setTitle('Total Amount : '+ Constant.total + '$');
+    },
+    proceedToPay: function(){
+        console.log('proceedToPay');
+        var viewItems = Ext.Viewport.getItems();
+        //viewItems.items[viewItems.items.length -1].show();
+        Ext.Viewport.setActiveItem(viewItems.items[viewItems.items.length -1]);
     }
 });

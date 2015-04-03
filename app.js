@@ -23,11 +23,13 @@ Ext.application({
         'Ext.MessageBox',
 		'Ext.form.FieldSet',
 		'Ext.field.Password',
-		'Constant'
+		'Constant',
+        'Ext.field.Email',
+        'Ext.field.TextArea'        
     ],
 
     views: [
-        'Login','Main'
+        'Login','Main','CompleteOrder'
     ],
 	
 	controllers: [
@@ -64,6 +66,7 @@ Ext.application({
         console.log('launched app');
         // -------- Performance Optimization ---------
         Constant.store.cartItems = Ext.getStore('cartItems');
+        Constant.uiComponentsExist.CompleteOrder = false;
         //Constant.uiComponents.cartTab = Ext.getCmp('ext-tabbar-1').down('.tab[title=Cart]');
 
         // Destroy the #appLoadingIndicator element

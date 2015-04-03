@@ -4,7 +4,8 @@ Ext.define('Constant', {
 		num : 0,
 		total: 0,
 		store: {},
-		uiComponents: {}
+		uiComponents: {},
+		uiComponentsExist: {}
 	},
     constructor : function(config) {
         this.initConfig(config);
