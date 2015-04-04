@@ -61,12 +61,12 @@ Ext.define('ShoppingApp.controller.MainController', {
                 }
 
                 // Updating badge count
-                Constant.num += parseInt(num.value);
+                Constant.badgeText += parseInt(num.value);
                 Constant.total += subtotal;
 
                 // Updating Badge Text of tab-Panel               
                 var tab = Constant.uiComponents.cartTab;
-                tab.setBadgeText(Constant.num);
+                tab.setBadgeText(Constant.badgeText);
 
                 // Updating Total Amount
                 var totalAmountCmp = Constant.uiComponents.totalAmount;
@@ -102,11 +102,11 @@ Ext.define('ShoppingApp.controller.MainController', {
             Constant.total += (subtotal - prvSubtotal);
 
             // Updating badge count
-            Constant.num += (parseInt(num.value) - prvQty);
+            Constant.badgeText += (parseInt(num.value) - prvQty);
 
             // Updating Badge Text of tab-Panel
             var tab = Constant.uiComponents.cartTab;
-            tab.setBadgeText(Constant.num);
+            tab.setBadgeText(Constant.badgeText);
 
             // Updating Total Amount
             var totalAmountCmp = Constant.uiComponents.totalAmount;
@@ -124,11 +124,11 @@ Ext.define('ShoppingApp.controller.MainController', {
             Constant.total = (Constant.total - prvSubtotal);
 
             // Updating badge count
-            Constant.num = (Constant.num - prvQty);
+            Constant.badgeText = (Constant.badgeText - prvQty);
 
              // Updating Badge Text of tab-Panel
             var tab = Constant.uiComponents.cartTab;
-            tab.setBadgeText(Constant.num);
+            tab.setBadgeText(Constant.badgeText);
 
             // Updating Total Amount
             var totalAmountCmp = Constant.uiComponents.totalAmount;
@@ -145,9 +145,9 @@ Ext.define('ShoppingApp.controller.MainController', {
         cartItems.removeAll();
 
         // Updating Badge Text of tab-Panel
-        Constant.num = 0;
+        Constant.badgeText = 0;
         var tab = Constant.uiComponents.cartTab;
-        tab.setBadgeText(Constant.num);
+        tab.setBadgeText(Constant.badgeText);
 
         // Updating Total Amount
         Constant.total = 0;
@@ -158,6 +158,6 @@ Ext.define('ShoppingApp.controller.MainController', {
         console.log('proceedToPay');
         var viewItems = Ext.Viewport.getItems();
         //viewItems.items[viewItems.items.length -1].show();
-        Ext.Viewport.setActiveItem(viewItems.items[viewItems.items.length -1]);
+        Ext.Viewport.setActiveItem('completeorder');
     }
 });

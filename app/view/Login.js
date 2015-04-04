@@ -62,17 +62,17 @@ Ext.define('ShoppingApp.view.Login', {
 									iconAlign: 'right',
 									itemId: 'login'
 								},
-								{
-									html: '<a href="#">Forgot Your Password??</a>',
-									cls: 'textAlignCenter',
-									margin: '25 0 0 0',
-									id: 'forgotCredentialLink',
-									initialize: function() {
-										this.element.on({
-											tap: function() { console.log('tapped!'); }
-										});
-									}
-								}
+								// {
+								// 	html: '<a href="#">Forgot Your Password??</a>',
+								// 	cls: 'textAlignCenter',
+								// 	margin: '25 0 0 0',
+								// 	id: 'forgotCredentialLink',
+								// 	initialize: function() {
+								// 		this.element.on({
+								// 			tap: function() { console.log('tapped!'); }
+								// 		});
+								// 	}
+								// }
 								
 							]
 						}

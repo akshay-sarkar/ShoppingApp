@@ -22,7 +22,7 @@ Ext.define('ShoppingApp.view.CompleteOrder', {
 			            	tap: function(){
 			            		console.log(' back button tapped');
 			            		var viewItems = Ext.Viewport.getItems();
-			            		Ext.Viewport.setActiveItem(viewItems.items[viewItems.items.length -2]);
+			            		Ext.Viewport.setActiveItem('main');
 			            	}
 			            }
 					}
@@ -32,13 +32,13 @@ Ext.define('ShoppingApp.view.CompleteOrder', {
 		   		xtype : 'container',
 				layout:  'fit',
 				cls: 'ks-basic',
+				height : '6.5em',
 				items:[
 						{
 							xtype: 'dataview',
 							store: 'cartItems',
 							scrollable: 'horizontal',
 							cls: 'dataview-horizontal',
-							height : '6.5em',
 							inline:{
 								wrap : false
 							},
@@ -54,77 +54,73 @@ Ext.define('ShoppingApp.view.CompleteOrder', {
 					]
             },
 			{
-				xtype : 'panel',
-				id: 'deliveryDetails',
-				height : 'auto',
+				xtype : 'deliveryform',
+				id: 'deliveryDetailsForm',
+				height : '100%',
 				layout: {
 					type: 'vbox',
-					align: 'center',
-					pack: 'center'
+					align: 'center'
 				},
 				defaults: {
 					width: '70%'
-				},
-				items:[
-						{
-							xtype: 'fieldset',
-							id: 'deliveryFieldset',
-							title: 'Delivery Details',
-							items:[
-								{
-									xtype: 'textfield',
-									id: 'fullname',
-									required: true,
-									placeHolder: 'Full Name',
-									//value: 'user'
-								},
-								{
-									xtype: 'emailfield',
-									id: 'email',
-									required: true,
-									placeHolder: 'Email (user@gmail.com)'
-									//value: 'user@gmail.com'									
-								},
-								{
-									xtype: 'textfield',
-									id: 'mobile',
-									required: true,
-									placeHolder: 'Mobile No (+91-7795215218)'
-									//value: '7795215218'									
-								},
-								{
-									xtype: 'textareafield',
-									id: 'address',
-									required: true,
-									placeHolder: 'Delivery Address',
-									value: ''									
-								}
-							]
-					   }
-				]
+				}
 			},
 			{
                 xtype: 'titlebar',
 				docked: 'bottom',
 				title: 'Total Amount : '+ Constant.total,
-				itemId: 'totalAmount',
+				itemId: 'checkoutTotalAmount',
                 items: [
 	                    {
 	                        text: 'Submit Order',
 	                        align: 'right',
 	                        handler: function(btn){
-	                           
-	                        }
+
+	                        	var formObj = Ext.getCmp('deliveryDetailsForm');
+								var formData = formObj.getValues();
+								 
+								var usr = Ext.create('ShoppingApp.model.DeliveryDetails',{
+									 fullname: formData.fullname,
+									 email:formData.email,
+									 mobile:formData.mobile,
+									 address: formData.address
+								});
+								 
+								var errs = usr.validate();
+								var msg = '';
+								 
+								if (!errs.isValid()) {
+								   errs.each(function (err) {
+								   		msg += err.getField() + ' : ' + err.getMessage() + '<br/>';
+								   });
+								 
+								   Ext.Msg.alert('ERROR', msg);
+								 
+								} else {
+									  Ext.Msg.alert('SUCCESS', 'Order Placed Successfully !! <br>Emptying Cart Now ..');
+									  var cartItems = Ext.getStore('cartItems');
+        							  cartItems.removeAll();
+        							  Constant.total = 0;
+        							  Constant.badgeText = 0;
+								}
+							}
 	                    },
 	                    {
 	                        text: 'Reset Form',
 	                        align: 'left',
 	                        handler: function(){
-	                            //Ext.getCmp('basicform').reset();
+	                            Ext.getCmp('deliveryDetailsForm').reset();
 	                        }	
 	                    }
                 ]
             }
-        ]
+        ],
+        listeners:{
+			 show: function( e, eOpts ){
+				console.log('show called');
+				// -------- Performance Optimization ---------
+				Constant.uiComponents.checkoutTotalAmount.setTitle('Total Amount : '+ Constant.total+ ' $');
+			 }
+		}
     }
 });

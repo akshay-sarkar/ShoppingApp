@@ -1,7 +1,7 @@
 Ext.define('Constant', {
     statics     : {
 		VERSION : '0.2',
-		num : 0,
+		badgeText : 0,
 		total: 0,
 		store: {},
 		uiComponents: {},

@@ -766,10 +766,12 @@ Ext.ClassManager.addNameAlternateMappings({
   "ShoppingApp.controller.LoginController": [],
   "ShoppingApp.controller.MainController": [],
   "ShoppingApp.model.CartItem": [],
+  "ShoppingApp.model.DeliveryDetails": [],
   "ShoppingApp.model.ShopItem": [],
   "ShoppingApp.store.CartItems": [],
   "ShoppingApp.store.ShopItems": [],
   "ShoppingApp.view.CompleteOrder": [],
+  "ShoppingApp.view.DeliveryForm": [],
   "ShoppingApp.view.Login": [],
   "ShoppingApp.view.Main": []
 });
@@ -1720,11 +1722,16 @@ Ext.ClassManager.addNameAliasMappings({
   "ShoppingApp.controller.LoginController": [],
   "ShoppingApp.controller.MainController": [],
   "ShoppingApp.model.CartItem": [],
+  "ShoppingApp.model.DeliveryDetails": [],
   "ShoppingApp.model.ShopItem": [],
   "ShoppingApp.store.CartItems": [],
   "ShoppingApp.store.ShopItems": [],
   "ShoppingApp.view.CompleteOrder": [
     "widget.completeorder"
+  ],
+  "ShoppingApp.view.DeliveryForm": [
+    "widget.DeliveryForm",
+    "widget.deliveryform"
   ],
   "ShoppingApp.view.Login": [
     "widget.login"

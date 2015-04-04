@@ -129,15 +129,22 @@ Ext.define('ShoppingApp.view.Main', {
 			 show: function( e, eOpts ){
 				console.log('show called');
 				// -------- Performance Optimization ---------
-				Constant.uiComponents.cartTab = Ext.getCmp('ext-tabbar-1').down('.tab[title=Cart]');
-				Constant.uiComponents.totalAmount = Ext.ComponentQuery.query('#totalAmount');
-
-			 	// Creating Proceed to pay panel
+				// Creating Proceed to pay panel
 			 	if(!Constant.uiComponentsExist.CompleteOrder){
 					var panel = Ext.create('ShoppingApp.view.CompleteOrder'); // Creating View
         			Ext.Viewport.add(panel); // Adding View to Viewport
         			Constant.uiComponentsExist.CompleteOrder = true;
+
+        			//Adding to UI Complnent Only Once...
+        			Constant.uiComponents.cartTab = Ext.getCmp('ext-tabbar-1').down('.tab[title=Cart]');
+					Constant.uiComponents.totalAmount = Ext.ComponentQuery.query('#totalAmount');
+        			
+        			//set CheckoutAmount
+        			Constant.uiComponents.checkoutTotalAmount = Ext.ComponentQuery.query('#checkoutTotalAmount')[0];
         		}
+
+        		Constant.uiComponents.totalAmount[0].setTitle('Total Amount : '+ Constant.total + '$');
+        		Constant.uiComponents.cartTab.setBadgeText(Constant.badgeText);
 			 }
 		}
     }
