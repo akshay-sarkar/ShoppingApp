@@ -42,8 +42,8 @@ Ext.define('ShoppingApp.view.CompleteOrder', {
 							inline:{
 								wrap : false
 							},
-							itemTpl: '<div style="height:100px;">'+
-										'<image src={imageUrl} height="100" width="100" style="float:left;">'+
+							itemTpl: '<div style="overflow:hidden;width:100%;">'+
+										'<image src={imageUrl} class="listImage">'+
 										'<div class="box">'+
 											'<div>{productType}</div><br>'+
 											'<div>Quantity : {qty}</div>'+
@@ -57,12 +57,10 @@ Ext.define('ShoppingApp.view.CompleteOrder', {
 				xtype : 'deliveryform',
 				id: 'deliveryDetailsForm',
 				height : '100%',
+				cls: 'detailsForm',
 				layout: {
 					type: 'vbox',
 					align: 'center'
-				},
-				defaults: {
-					width: '70%'
 				}
 			},
 			{

@@ -13,13 +13,8 @@
 .textAlignCenter{
 	text-align : center ;
 }
-.box{
-	float: left;
-	vertical-align: top;
-	margin-left: 15px;
-}
 .title{
-	  font-size: xx-large;
+	//font-size: xx-large;
 }
 .boxRight{
 	float: right;
@@ -37,3 +32,72 @@
   margin: .4em 0.7em 0.3em !important;
 }
 
+
+/* CSS MediaQuries */
+
+.listImage{
+	float:left;height:100px;width:100px;	
+}
+.box{
+	float: left;
+	vertical-align: top;
+	margin-left: 15px;
+}
+.boxRight{
+	float: right;
+	vertical-align: top;
+}
+.detailsForm{
+	width :70%;
+}
+.boxButton{
+	display: inline;margin: 1.5em;border: #a6a6a6;
+}
+
+.display320{
+		display: none;
+}
+
+@media screen and (max-width: 320px) {
+    
+    /* Sencha Class */
+	.x-tabbar.x-docked-top .x-tab.x-tab-icon {
+	  padding: 0.3em 0.4em;
+	}
+	.x-tabbar.x-docked-top {
+	  padding: .2em !important;
+	}
+	.x-list .x-list-item.x-list-item-tpl .x-innerhtml {
+	  padding: 5px 8px;
+	}
+
+	/* Internal Class*/
+    .listImage{
+		float:left;
+		height:75px;
+		width:75px;	
+	}
+	.box{
+		margin-left: 10px;
+		font-size: medium !important;
+	}
+	.boxRight{
+		display: none;
+	}
+	.detailsForm{
+		width :70%;
+	}
+	.boxButton{
+		margin: 0em !important;
+		margin-top: -4px !important;
+	}
+	.display320{
+		display: block;
+		float: left;
+		margin-left : 1em !important;
+	}
+	.floatLeft{
+		float : left;
+		margin-left: 1em;
+	}
+}

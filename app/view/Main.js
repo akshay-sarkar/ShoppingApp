@@ -14,7 +14,7 @@ Ext.define('ShoppingApp.view.Main', {
         },
         items: [
             {
-                title: 'Exclusive Item',
+                title: 'Exclusives',
                 iconCls: 'favorites',
 				itemId: 'exclusivePage',
                 items: [
@@ -25,16 +25,16 @@ Ext.define('ShoppingApp.view.Main', {
 						store: 'shopItems',
 						selectedCls: '',
 						pressedCls:'',
-						itemTpl: '<div style="height:100px;">'+
-									'<image src={imageUrl} height="100" width="100" style="float:left;">'+
-									'<div class="box">'+
-										'<div class="title">{productType}</div><br>'+
-										'<div class="price"> ${price}</div>'+
-									'</div>'+
-									'<div class="boxRight">'+
-										'<input type="number" value="0" min="0" max="10"/>'+
-										'<input type="button" value="Add" class="x-button-action x-button" style="display: inline;margin: 1.5em;border: #a6a6a6;"/>'+
-									'</div>'+
+						itemTpl: '<div style="overflow:hidden;width:100%;">'+
+									'<image src={imageUrl} class="listImage"/>'+
+										'<div class="box">'+
+											'<div class="title">{productType}</div><br>'+
+											'<div class="price"> <span class="floatLeft">${price}</span> <input type="number" value="0" min="0" max="10" class="display320"/> <input type="button" value="Add" class="x-button-action x-button boxButton display320"/></div>'+
+										'</div>'+
+										'<div class="boxRight">'+
+											'<input type="number" value="0" min="0" max="10"/>'+
+											'<input type="button" value="Add" class="x-button-action x-button boxButton"/>'+
+										'</div>'+
 								 '</div>'
                     }
                 ],
@@ -57,15 +57,15 @@ Ext.define('ShoppingApp.view.Main', {
 						selectedCls: '',
 						pressedCls:'',
 						store: 'shopItems',
-						itemTpl: '<div style="height:100px;">'+
-									'<image src={imageUrl} height="100" width="100" style="float:left;">'+
+						itemTpl: '<div style="overflow:hidden;width:100%;">'+
+									'<image src={imageUrl} class="listImage">'+
 									'<div class="box">'+
 										'<div class="title">{productType}</div><br>'+
-										'<div class="price"> ${price}</div>'+
+										'<div class="price"> <span class="floatLeft">${price}</span> <input type="number" value="0" min="0" max="10" class="display320"/> <input type="button" value="Add" class="x-button-action x-button boxButton display320"/> </div> '+
 									'</div>'+
 									'<div class="boxRight">'+
 										'<input type="number" value="0" min="0" max="10"/>'+
-										'<input type="button" value="Add" class="x-button-action x-button" style="display: inline;margin: 1.5em;border: #a6a6a6;"/>'+
+										'<input type="button" value="Add" class="x-button-action x-button boxButton"/>'+
 									'</div>'+
 								 '</div>'
                     }
@@ -90,8 +90,8 @@ Ext.define('ShoppingApp.view.Main', {
 						itemId: 'cartList',
 						selectedCls: '',
 						pressedCls:'',
-						itemTpl: '<div style="height:100px;">'+
-									'<image src={imageUrl} height="100" width="100" style="float:left;">'+
+						itemTpl: '<div style="overflow:hidden;height:100%;">'+
+									'<image src={imageUrl} class="listImage">'+
 									'<div class="box">'+
 										'<div class="title">{productType}</div><br>'+
 										'<div class="price"> ${price}</div>'+

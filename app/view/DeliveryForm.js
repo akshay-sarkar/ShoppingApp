@@ -18,14 +18,12 @@ Ext.define('ShoppingApp.view.DeliveryForm', {
                          required: true,
                          label: 'Full Name',
                          labelWrap: true,
-                         placeHolder: 'Full Name',
                         // value: 'user adam'
                      },
                      {
                          xtype: 'emailfield',
                          name: 'email',
                          required: true,
-                         placeHolder: 'Email (user@gmail.com)',
                          label: 'Email',
                          labelWrap: true,
                         // value: 'user@gmail.com'                                   
@@ -34,7 +32,6 @@ Ext.define('ShoppingApp.view.DeliveryForm', {
                          xtype: 'textfield',
                          name: 'mobile',
                          required: true,
-                         placeHolder: 'Mobile No (+91-7795215218)',
                          label: 'Mobile No',
                          labelWrap: true,
                         // value: '7795215218'                                   
@@ -43,7 +40,6 @@ Ext.define('ShoppingApp.view.DeliveryForm', {
                          xtype: 'textareafield',
                          name: 'address',
                          required: true,
-                         placeHolder: 'Delivery Address',
                          label: 'Address',
                          labelWrap: true,
                         // value: ' A-24 rij Vihar'                                   
