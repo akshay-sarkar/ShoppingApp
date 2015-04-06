@@ -8,7 +8,7 @@ Ext.define('ShoppingApp.view.Login', {
         
         items: [
            {
-				xtype: 'toolbar',
+				xtype: 'titlebar',
 				docked: 'top',
 				title: 'Shopping App'
 		   },

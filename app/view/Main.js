@@ -85,7 +85,7 @@ Ext.define('ShoppingApp.view.Main', {
                 items: [
                     {
 						xtype: 'list',
-						height: '100%',
+						height: '92%',
 						store: 'cartItems',
 						itemId: 'cartList',
 						selectedCls: '',
@@ -94,16 +94,22 @@ Ext.define('ShoppingApp.view.Main', {
 									'<image src={imageUrl} class="listImage">'+
 									'<div class="box">'+
 										'<div class="title">{productType}</div><br>'+
-										'<div class="price"> ${price}</div>'+
+										'<div class="price floatRight"> ${price}</div>'+
 									'</div>'+
-									'<div class="boxRight">'+
-										'<div>Quantity <input type="number" value="{qty}" min="1" max="10"/>'+
+									'<div class="boxRight cartMobile">'+
+										'<div class="floatRight">Quantity <input type="number" value="{qty}" min="1" max="10"/>'+
 										'<input type="button" id="update" value="Update" class="x-button-action x-button" style="display: inline;margin: 0.5em;border: #a6a6a6;"/>  <br></div>'+
 										'<div style="margin-top: 10px;"> Subtotal : {subtotal}'+
 										'<input type="button" id="remove" value="Remove Item" class="x-button-action x-button" style="display: inline;margin: 0.5em;border: #a6a6a6;"/>  <br></div>'+
 									'</div>'+
 								 '</div>'
                     },
+                    {
+		            	xtype: 'panel',
+		            	itemId: 'totalAmountCart',
+		            	cls: 'totalAmountCart',
+		            	html: 'Total Amount : '+ Constant.total+ ' $',
+		            },
                     {
 			            xtype : 'titlebar',
 			            docked: 'bottom',
@@ -138,12 +144,16 @@ Ext.define('ShoppingApp.view.Main', {
         			//Adding to UI Complnent Only Once...
         			Constant.uiComponents.cartTab = Ext.getCmp('ext-tabbar-1').down('.tab[title=Cart]');
 					Constant.uiComponents.totalAmount = Ext.ComponentQuery.query('#totalAmount');
+
+					Constant.uiComponents.totalAmountCart = Ext.ComponentQuery.query('#totalAmountCart');
         			
         			//set CheckoutAmount
         			Constant.uiComponents.checkoutTotalAmount = Ext.ComponentQuery.query('#checkoutTotalAmount')[0];
+        			Constant.uiComponents.totalAmountComplete = Ext.ComponentQuery.query('#totalAmountComplete')[0];
         		}
 
         		Constant.uiComponents.totalAmount[0].setTitle('Total Amount : '+ Constant.total + '$');
+        		Constant.uiComponents.totalAmountCart[0].setHtml('Total Amount : '+ Constant.total + '$');
         		Constant.uiComponents.cartTab.setBadgeText(Constant.badgeText);
 			 }
 		}

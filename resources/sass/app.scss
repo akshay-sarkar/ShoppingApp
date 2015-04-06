@@ -48,13 +48,13 @@
 	vertical-align: top;
 }
 .detailsForm{
-	width :70%;
+	width :100%;
 }
 .boxButton{
 	display: inline;margin: 1.5em;border: #a6a6a6;
 }
 
-.display320{
+.display320, .totalAmountComplete, .totalAmountCart{
 		display: none;
 }
 
@@ -68,7 +68,10 @@
 	  padding: .2em !important;
 	}
 	.x-list .x-list-item.x-list-item-tpl .x-innerhtml {
-	  padding: 5px 8px;
+	  padding: 5px 4px;
+	}
+	.x-toolbar-dark .x-title{
+		display : none;
 	}
 
 	/* Internal Class*/
@@ -79,13 +82,14 @@
 	}
 	.box{
 		margin-left: 10px;
-		font-size: medium !important;
+		float: right;
+		font-size: large !important;
+	}
+	.floatRight{
+		float: right;
 	}
 	.boxRight{
 		display: none;
-	}
-	.detailsForm{
-		width :70%;
 	}
 	.boxButton{
 		margin: 0em !important;
@@ -99,5 +103,16 @@
 	.floatLeft{
 		float : left;
 		margin-left: 1em;
+	}
+	.cartMobile{
+		display: block;
+		font-size: medium;
+		margin-left: 3px;
+	}
+	.totalAmountComplete, .totalAmountCart{
+		display: block;
+		text-align: right;
+	    border-top: 1px black solid;
+	    margin: 5px;
 	}
 }

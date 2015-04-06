@@ -53,6 +53,12 @@ Ext.define('ShoppingApp.view.CompleteOrder', {
 						}
 					]
             },
+            {
+            	xtype: 'panel',
+            	itemId: 'totalAmountComplete',
+            	cls: 'totalAmountComplete',
+            	html: 'Total Amount : '+ Constant.total+ ' $',
+            },
 			{
 				xtype : 'deliveryform',
 				id: 'deliveryDetailsForm',
@@ -66,7 +72,7 @@ Ext.define('ShoppingApp.view.CompleteOrder', {
 			{
                 xtype: 'titlebar',
 				docked: 'bottom',
-				title: 'Total Amount : '+ Constant.total,
+				title: 'Total Amount : '+ Constant.total+ ' $',
 				itemId: 'checkoutTotalAmount',
                 items: [
 	                    {
@@ -118,6 +124,7 @@ Ext.define('ShoppingApp.view.CompleteOrder', {
 				console.log('show called');
 				// -------- Performance Optimization ---------
 				Constant.uiComponents.checkoutTotalAmount.setTitle('Total Amount : '+ Constant.total+ ' $');
+				Constant.uiComponents.totalAmountComplete.setHtml('Total Amount : '+ Constant.total+ ' $');
 			 }
 		}
     }

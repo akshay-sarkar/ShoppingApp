@@ -72,6 +72,8 @@ Ext.define('ShoppingApp.controller.MainController', {
                 var totalAmountCmp = Constant.uiComponents.totalAmount;
                 totalAmountCmp[0].setTitle('Total Amount : '+ Constant.total + '$');
 
+                Constant.uiComponents.totalAmountCart[0].setHtml('Total Amount : '+ Constant.total + '$');
+
                 // After adding to cart set back the value to 0
                 num.value = 0;
 
@@ -111,6 +113,7 @@ Ext.define('ShoppingApp.controller.MainController', {
             // Updating Total Amount
             var totalAmountCmp = Constant.uiComponents.totalAmount;
             totalAmountCmp[0].setTitle('Total Amount : '+ Constant.total + '$');
+            Constant.uiComponents.totalAmountCart[0].setHtml('Total Amount : '+ Constant.total + '$');
         }
         else if(type == 'button' && id=='remove') {
             console.log('remove this item');
@@ -134,6 +137,8 @@ Ext.define('ShoppingApp.controller.MainController', {
             var totalAmountCmp = Constant.uiComponents.totalAmount;
             totalAmountCmp[0].setTitle('Total Amount : '+ Constant.total + '$');
 
+            Constant.uiComponents.totalAmountCart[0].setHtml('Total Amount : '+ Constant.total + '$');
+
             // Getting Store Referenece
             var cartItems = Constant.store.cartItems;
             cartItems.remove(record);
@@ -153,6 +158,8 @@ Ext.define('ShoppingApp.controller.MainController', {
         Constant.total = 0;
         var totalAmountCmp = Constant.uiComponents.totalAmount;
         totalAmountCmp[0].setTitle('Total Amount : '+ Constant.total + '$');
+
+        Constant.uiComponents.totalAmountCart[0].setHtml('Total Amount : '+ Constant.total + '$');
     },
     proceedToPay: function(){
         console.log('proceedToPay');
