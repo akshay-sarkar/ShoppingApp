@@ -39,4 +39,12 @@ Flow from user authentication to cart management and purchase by providing deliv
 - Providing Delivery Details with COD options.
 - UI Improvement and business logic
 
+@05/04 -07/04/2015
+- Optimize UI with Media Queries
+
+#Feature Coming :
+- Filter Product List (A-Z t, Price) 
+- Search Product from List
+- Categorizing Product (Mobile/ Tablet)
+
 Please give input guys !!
