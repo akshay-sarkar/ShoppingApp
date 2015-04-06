@@ -10,7 +10,7 @@ This is a shopping application developed using Sencha Touch for cross platform s
 
 Flow from user authentication to cart management and purchase by providing delivery address.
 
-#Optimizing View For Mobile Application in media queries, some functionality may not work in mobile. 
+# Optimzed for Iphone4/4s/5 and tablet.
 
 #Features covered:-
 @16/03/2015
