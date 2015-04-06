@@ -47,4 +47,7 @@ Flow from user authentication to cart management and purchase by providing deliv
 - Search Product from List
 - Categorizing Product (Mobile/ Tablet)
 
-Please give input guys !!
+#Issue:
+- DataList handling in Complete Order Page.
+
+Welcome to any ideas, please mail me on akshay.sarkar.dbit@gmail.com
