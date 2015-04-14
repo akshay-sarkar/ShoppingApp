@@ -36,7 +36,24 @@ Ext.define('ShoppingApp.view.Main', {
 											'<input type="button" value="Add" class="x-button-action x-button boxButton"/>'+
 										'</div>'+
 								 '</div>'
-                    }
+                    },
+                    {
+						xtype: 'toolbar',
+						docked: 'bottom',
+						items:[
+							{
+			                    xtype: 'selectfield',
+			                    itemId: 'sortBy',
+			                    options: [
+			                        {text: 'Sort By',  value: '_'},
+			                        {text: 'Price - Low to High', value: 'ASC'},
+			                        {text: 'Price - High to Low', value: 'DESC'},
+			                        {text: 'Alphabetic - A to Z', value: 'alpha_asc'},
+			                        {text: 'Alphabetic - Z to A', value: 'alpha_desc'},
+			                    ]
+			                }
+						]
+					}
                 ],
 				listeners:{
 					show: function( e, eOpts ){
@@ -68,7 +85,24 @@ Ext.define('ShoppingApp.view.Main', {
 										'<input type="button" value="Add" class="x-button-action x-button boxButton"/>'+
 									'</div>'+
 								 '</div>'
-                    }
+                    },
+                    {
+						xtype: 'toolbar',
+						docked: 'bottom',
+						items:[
+							{
+			                    xtype: 'selectfield',
+			                    itemId: 'sortBy',
+			                    options: [
+			                        {text: 'Sort By',  value: '_'},
+			                        {text: 'Price - Low to High', value: 'ASC'},
+			                        {text: 'Price - High to Low', value: 'DESC'},
+			                        {text: 'Alphabetic - A to Z', value: 'alpha_asc'},
+			                        {text: 'Alphabetic - Z to A', value: 'alpha_desc'},
+			                    ]
+			                }
+						]
+					}
                 ],
 				listeners:{
 					show: function( e, eOpts ){

@@ -17,6 +17,9 @@ Ext.define('ShoppingApp.controller.MainController', {
             },
             'button[itemId=ProceedPay]':{
                 tap: 'proceedToPay'    
+            },
+            'selectfield[itemId=sortBy]':{
+                change: 'sortBy'
             }
         },
         refs: {
@@ -166,5 +169,20 @@ Ext.define('ShoppingApp.controller.MainController', {
         var viewItems = Ext.Viewport.getItems();
         //viewItems.items[viewItems.items.length -1].show();
         Ext.Viewport.setActiveItem('completeorder');
+    },
+    sortBy:  function( ele, newValue, oldValue, eOpts ){
+        console.log('sortBy '+newValue);
+        var cartItems = Ext.getStore("shopItems");
+        // Getting Store Referenece
+        if(newValue=='DESC')
+            cartItems.sort('price','ASC');
+        else if(newValue=='ASC')
+            cartItems.sort('price','DESC');
+        else if(newValue=='alpha_asc')
+            cartItems.sort('productType','ASC');
+        else if(newValue=='alpha_desc')
+            cartItems.sort('productType','DESC');
+        else
+            Ext.Msg.alert('Choose One Option !!');
     }
 });
