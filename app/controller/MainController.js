@@ -20,6 +20,10 @@ Ext.define('ShoppingApp.controller.MainController', {
             },
             'selectfield[itemId=sortBy]':{
                 change: 'sortBy'
+            },
+            'searchfield[itemId=searchBox]' : {
+                clearicontap : 'onClearSearch',
+                keyup: 'onSearchKeyUp'
             }
         },
         refs: {
@@ -148,7 +152,6 @@ Ext.define('ShoppingApp.controller.MainController', {
         }
     },
     emptyCart: function(){
-        console.log('empty cart');
         var cartItems = Ext.getStore('cartItems');
         cartItems.removeAll();
 
@@ -165,24 +168,47 @@ Ext.define('ShoppingApp.controller.MainController', {
         Constant.uiComponents.totalAmountCart[0].setHtml('Total Amount : '+ Constant.total + '$');
     },
     proceedToPay: function(){
-        console.log('proceedToPay');
+
         var viewItems = Ext.Viewport.getItems();
         //viewItems.items[viewItems.items.length -1].show();
         Ext.Viewport.setActiveItem('completeorder');
     },
     sortBy:  function( ele, newValue, oldValue, eOpts ){
-        console.log('sortBy '+newValue);
+
         var cartItems = Ext.getStore("shopItems");
         // Getting Store Referenece
-        if(newValue=='DESC')
-            cartItems.sort('price','ASC');
-        else if(newValue=='ASC')
+        if(newValue == 'price_desc')
             cartItems.sort('price','DESC');
-        else if(newValue=='alpha_asc')
+        else if(newValue == 'price_asc')
+            cartItems.sort('price','ASC');
+        else if(newValue == 'alpha_asc')
             cartItems.sort('productType','ASC');
-        else if(newValue=='alpha_desc')
+        else if(newValue == 'alpha_desc')
             cartItems.sort('productType','DESC');
         else
             Ext.Msg.alert('Choose One Option !!');
-    }
+    },
+    onSearchKeyUp: function(searchField) {
+          queryString = searchField.getValue();
+          console.log(this,'Please search by: ' + queryString);
+         
+          var store = Ext.getStore('shopItems');
+          store.clearFilter();
+         
+          if(queryString){
+           var thisRegEx = new RegExp(queryString, "i");
+           store.filterBy(function(record) {
+            if (thisRegEx.test(record.get('productType')) ) {
+             return true;
+            };
+            return false;
+           });
+          }
+     
+     },
+     onClearSearch: function() {
+      console.log('Clear icon is tapped');
+      var store = Ext.getStore('shopItems');
+      store.clearFilter();
+     }
 });

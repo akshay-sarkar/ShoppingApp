@@ -1,6 +1,12 @@
 Ext.define('ShoppingApp.model.CartItem', {
     extend: 'Ext.data.Model',
     config: {
-        fields: ['productType', 'imageUrl' , 'price', 'qty', 'subtotal']
+        fields: [
+	        {	name: 'productType', type: 'string'},
+	        {  	name: 'imageUrl', type: 'string'},
+	        {	name: 'price' , type: 'int'},
+	        {	name: 'qty',  type: 'int'} ,
+	        {	name: 'subtotal',  type: 'string'} 
+         ]
     }
 });

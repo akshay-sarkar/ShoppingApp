@@ -46,10 +46,10 @@ Ext.define('ShoppingApp.view.Main', {
 			                    itemId: 'sortBy',
 			                    options: [
 			                        {text: 'Sort By',  value: '_'},
-			                        {text: 'Price - Low to High', value: 'ASC'},
-			                        {text: 'Price - High to Low', value: 'DESC'},
+			                        {text: 'Price - Low to High', value: 'price_asc'},
+			                        {text: 'Price - High to Low', value: 'price_desc'},
 			                        {text: 'Alphabetic - A to Z', value: 'alpha_asc'},
-			                        {text: 'Alphabetic - Z to A', value: 'alpha_desc'},
+			                        {text: 'Alphabetic - Z to A', value: 'alpha_desc'}
 			                    ]
 			                }
 						]
@@ -67,6 +67,19 @@ Ext.define('ShoppingApp.view.Main', {
                 iconCls: 'home',
 				itemId: 'allPage',
                 items: [
+                	{
+	                     xtype: 'toolbar',
+	                     docked: 'top',
+	                     centered: true,
+	  
+	                     items: [
+	                         {
+	                             xtype: 'searchfield',
+	                             placeHolder: 'Search...',
+	                             itemId: 'searchBox'
+	                         }
+	                     ]
+	                },
                     {
 						xtype: 'list',
 						height: '100%',
@@ -95,8 +108,8 @@ Ext.define('ShoppingApp.view.Main', {
 			                    itemId: 'sortBy',
 			                    options: [
 			                        {text: 'Sort By',  value: '_'},
-			                        {text: 'Price - Low to High', value: 'ASC'},
-			                        {text: 'Price - High to Low', value: 'DESC'},
+			                        {text: 'Price - Low to High', value: 'price_asc'},
+			                        {text: 'Price - High to Low', value: 'price_desc'},
 			                        {text: 'Alphabetic - A to Z', value: 'alpha_asc'},
 			                        {text: 'Alphabetic - Z to A', value: 'alpha_desc'},
 			                    ]
