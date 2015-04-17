@@ -46,6 +46,7 @@ Flow from user authentication to cart management and purchase by providing deliv
 - Filter Product List (A-Z t, Price) 
 - Search Product from List
 - Categorizing Product (Mobile/ Tablet)
+- Building UI for specific Platform Android, iOS and Windows using App.json 
 
 #Issue:
 - DataList handling in Complete Order Page.
