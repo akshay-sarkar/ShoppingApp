@@ -1,83 +1,49 @@
 Ext.define('ShoppingApp.view.Login', {
-    extend: 'Ext.Panel',
-    xtype: 'login',
-    requires: [
-        'Ext.Toolbar'
-    ],
-    config: {
-        
-        items: [
-           {
-				xtype: 'titlebar',
-				docked: 'top',
-				title: 'Shopping App'
-		   },
-			{
-				xtype : 'panel',
-				id: 'usercrendentials',
-				layout: {
-					type: 'vbox',
-					align: 'center',
-					pack: 'center'
-				},
-				defaults: {
-					width: '70%'
-				},
-				items:[
-						{
-							xtype: 'fieldset',
-							id: 'fieldset',
-							title: 'Log in to account',
-							items:[
-								{
-									xtype: 'textfield',
-									id: 'username',
-									required: true,
-									placeHolder: 'Email Id / Username',
-									clearIcon : false,
-									value: 'user'
-								},
-								{
-									xtype: 'passwordfield',
-									id: 'password',
-									required: true,
-									placeHolder: 'Password',
-									clearIcon : false,
-									value: 'user'									
-								}
-							]
-					   },
-					   {
-							xtype: 'panel',
-							layout: {
-								type: 'vbox',
-								align: 'stretch',
-								pack: 'start'
-							},
-							items: [
-								{
-									xtype: 'button',
-									text: 'login',
-									iconCls: 'arrow_right',
-									iconAlign: 'right',
-									itemId: 'login'
-								},
-								// {
-								// 	html: '<a href="#">Forgot Your Password??</a>',
-								// 	cls: 'textAlignCenter',
-								// 	margin: '25 0 0 0',
-								// 	id: 'forgotCredentialLink',
-								// 	initialize: function() {
-								// 		this.element.on({
-								// 			tap: function() { console.log('tapped!'); }
-								// 		});
-								// 	}
-								// }
-								
-							]
-						}
-				]
-			}
-        ]
-    }
+	extend: 'Ext.form.Panel',
+	xtype: 'login',
+
+	requires: [
+		'Ext.TitleBar',
+		'Ext.form.FieldSet',
+		'Ext.field.Text',
+		'Ext.field.Password',
+		'Ext.Button'
+	],
+
+	config: {
+		fullscreen: true,
+		items: [{
+			xtype: 'titlebar',
+			docked: 'top',
+			title: 'Shopping App'
+		}, {
+			xtype: 'fieldset',
+			title: 'Log in to account',
+			style: {
+				margin: '9px 15% 28px'
+			},
+			defaults: {
+				required: true,
+				clearIcon: false
+			},
+			items: [{
+				xtype: 'textfield',
+				name: 'username',
+				placeHolder: 'Email Id / Username'
+			}, {
+				xtype: 'passwordfield',
+				name: 'password',
+				placeHolder: 'Password'
+			}]
+		}, {
+			xtype: 'button',
+			height: 40,
+			style: {
+				margin: 'auto 15%'
+			},
+			text: 'login',
+			iconCls: 'arrow_right',
+			iconAlign: 'right'
+		}]
+	}
 });
