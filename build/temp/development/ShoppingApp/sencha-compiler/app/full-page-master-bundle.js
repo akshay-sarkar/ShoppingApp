@@ -1,2 +1,2 @@
 // @tag full-page
-// @require D:\sencha\Application\ShoppingApp\app.js
+// @require C:\Users\Akshay Sarkar\Documents\GitHub\ShoppingApp\app.js

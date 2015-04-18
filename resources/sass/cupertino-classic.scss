@@ -1,0 +1,118 @@
+// The following two lines import the default Sencha Touch theme. If you are building
+// a new theme, remove them and the add your own CSS on top of the base CSS (which
+// is already included in your app.json file).
+
+@import 'sencha-touch/cupertino-classic';
+@import 'sencha-touch/cupertino-classic/all';
+
+// Custom code goes here..
+
+// Examples of using the icon mixin:
+@include icon('user');
+
+.textAlignCenter{
+	text-align : center ;
+}
+.title{
+	//font-size: xx-large;
+}
+.boxRight{
+	float: right;
+	vertical-align: top;
+}
+.x-dataview-item{
+	margin: .5em 1em 0em 1em !important;
+}
+
+.x-scroll-indicator-x{
+	visibility: hidden;
+}
+
+.x-form-fieldset-title {
+  margin: .4em 0.7em 0.3em !important;
+}
+
+
+/* CSS MediaQuries */
+
+.listImage{
+	float:left;height:100px;width:100px;	
+}
+.box{
+	float: left;
+	vertical-align: top;
+	margin-left: 15px;
+}
+.boxRight{
+	float: right;
+	vertical-align: top;
+}
+.detailsForm{
+	width :100%;
+}
+.boxButton{
+	display: inline;margin: 1.5em;border: #a6a6a6;
+}
+
+.display320, .totalAmountComplete, .totalAmountCart{
+		display: none;
+}
+
+@media screen and (max-width: 320px) {
+    
+    /* Sencha Class */
+	.x-tabbar.x-docked-top .x-tab.x-tab-icon {
+	  padding: 0.3em 0.4em;
+	}
+	.x-tabbar.x-docked-top {
+	  padding: .2em !important;
+	}
+	.x-list .x-list-item.x-list-item-tpl .x-innerhtml {
+	  padding: 5px 4px;
+	}
+	.x-toolbar-dark .x-title{
+		display : none;
+	}
+
+	/* Internal Class*/
+    .listImage{
+		float:left;
+		height:75px;
+		width:75px;	
+	}
+	.box{
+		margin-left: 10px;
+		float: right;
+		font-size: large !important;
+	}
+	.floatRight{
+		float: right;
+	}
+	.boxRight{
+		display: none;
+	}
+	.boxButton{
+		margin: 0em !important;
+		margin-top: -4px !important;
+	}
+	.display320{
+		display: block;
+		float: left;
+		margin-left : 1em !important;
+	}
+	.floatLeft{
+		float : left;
+		margin-left: 1em;
+	}
+	.cartMobile{
+		display: block;
+		font-size: medium;
+		margin-left: 3px;
+	}
+	.totalAmountComplete, .totalAmountCart{
+		display: block;
+		text-align: right;
+	    border-top: 1px black solid;
+	    margin: 5px;
+	}
+}
