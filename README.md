@@ -39,14 +39,19 @@ Flow from user authentication to cart management and purchase by providing deliv
 - Providing Delivery Details with COD options.
 - UI Improvement and business logic
 
-@05/04 -07/04/2015
+@05 - 07/04/2015
 - Optimize UI with Media Queries
 
-#Feature Coming :
+@12 - 15/04/2015
 - Filter Product List (A-Z t, Price) 
 - Search Product from List
+
+@18 - 19/04/2015
+- Building UI for specific Platform Android, iOS and Windows using App.json
+- Some Improvement
+
+#Feature Coming :
 - Categorizing Product (Mobile/ Tablet)
-- Building UI for specific Platform Android, iOS and Windows using App.json 
 
 #Issue:
 - DataList handling in Complete Order Page.
