@@ -32,7 +32,7 @@ Ext.define('ShoppingApp.view.Main', {
 											'<div class="price"> <span class="floatLeft">${price}</span> <input type="number" value="0" min="0" max="10" class="display320"/> <input type="button" value="Add" class="x-button-action x-button boxButton display320"/></div>'+
 										'</div>'+
 										'<div class="boxRight">'+
-											'<input type="number" value="0"	 min="1" max="10"  onkeyup="ShoppingApp.app.getController(\'MainController\').keyUpEvent(this)" />'+
+											'<input type="number" value="0" min="0" max="10"/>'+
 											'<input type="button" value="Add" class="x-button-action x-button boxButton"/>'+
 										'</div>'+
 								 '</div>'
@@ -94,7 +94,7 @@ Ext.define('ShoppingApp.view.Main', {
 										'<div class="price"> <span class="floatLeft">${price}</span> <input type="number" value="0" min="0" max="10" class="display320"/> <input type="button" value="Add" class="x-button-action x-button boxButton display320"/> </div> '+
 									'</div>'+
 									'<div class="boxRight">'+
-										'<input type="number" value="0" min="1" max="10" onkeyup="ShoppingApp.app.getController(\'MainController\').keyUpEvent(this)"/>'+
+										'<input type="number" value="0" min="0" max="10"/>'+
 										'<input type="button" value="Add" class="x-button-action x-button boxButton"/>'+
 									'</div>'+
 								 '</div>'
@@ -144,7 +144,7 @@ Ext.define('ShoppingApp.view.Main', {
 										'<div class="price floatRight"> ${price}</div>'+
 									'</div>'+
 									'<div class="boxRight cartMobile">'+
-										'<div class="floatRight">Quantity <input type="number" value="{qty}" min="1" max="10" onkeyup="ShoppingApp.app.getController(\'MainController\').keyDownEvent(this,\'{qty}\')"/>'+
+										'<div class="floatRight">Quantity <input type="number" value="{qty}" min="1" max="10"/>'+
 										'<input type="button" id="update" value="Update" class="x-button-action x-button" style="display: inline;margin: 0.5em;border: #a6a6a6;"/>  <br></div>'+
 										'<div style="margin-top: 10px;"> Subtotal : {subtotal}'+
 										'<input type="button" id="remove" value="Remove Item" class="x-button-action x-button" style="display: inline;margin: 0.5em;border: #a6a6a6;"/>  <br></div>'+
@@ -204,8 +204,5 @@ Ext.define('ShoppingApp.view.Main', {
         		Constant.uiComponents.cartTab.setBadgeText(Constant.badgeText);
 			 }
 		}
-    },
-    keyUpEvent: function(){
-    	console.log('keyUp');
     }
 });

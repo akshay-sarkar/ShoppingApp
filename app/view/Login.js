@@ -29,13 +29,11 @@ Ext.define('ShoppingApp.view.Login', {
 			items: [{
 				xtype: 'textfield',
 				name: 'username',
-				placeHolder: 'Email Id / Username',
-				value : 'user'
+				placeHolder: 'Email Id / Username'
 			}, {
 				xtype: 'passwordfield',
 				name: 'password',
-				placeHolder: 'Password',
-				value: 'user'
+				placeHolder: 'Password'
 			}]
 		}, {
 			xtype: 'button',
