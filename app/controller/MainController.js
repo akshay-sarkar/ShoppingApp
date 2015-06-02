@@ -210,5 +210,21 @@ Ext.define('ShoppingApp.controller.MainController', {
       console.log('Clear icon is tapped');
       var store = Ext.getStore('shopItems');
       store.clearFilter();
+     },
+     keyDownEvent: function(ele,qty){
+        if(ele.value == "")
+                ele.value = qty;
+        else{
+            if(ele.value >= 11){
+                ele.value = 10;
+                Ext.Msg.alert('Max limit of 10 reached');
+            }
+        }
+
+            
+     },
+     keyUpEvent: function(ele,qty){
+        if(ele.value == "")
+            ele.value = 0;
      }
 });
