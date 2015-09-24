@@ -2,15 +2,17 @@
 Sencha Application
 Sencha Touch SDK : 2.4.1
 
-Credentials for using app :-
-Username : shopper
-password : shopper123
-
+#Link
 [IOS Basic](http://akshay-sarkar.github.io/ShoppingApp/build/production/ShoppingApp/index.html?platform=ios)
 [Android Basic](http://akshay-sarkar.github.io/ShoppingApp/build/production/ShoppingApp/index.html?platform=android)
 [Windows Phone Basic](http://akshay-sarkar.github.io/ShoppingApp/build/production/ShoppingApp/index.html?platform=ie10)
 [noraml secnha way](http://akshay-sarkar.github.io/ShoppingApp/build/production/ShoppingApp/index.html)
-Note: Issue with Chrome check in Mozilla or IE8+.
+Note: Issue with Chrome, please check in Mozilla or IE8+. Check in devices for appropriate results.
+
+#Credentials
+Credentials for using app :-
+Username : shopper
+password : shopper123
 
 This is a shopping application developed using Sencha Touch for cross platform support, under Development phase.. 
 
