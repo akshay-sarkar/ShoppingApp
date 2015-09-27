@@ -1,0 +1,121 @@
+Sencha Cmd 6.0.1.76 - Crash report
+================================================
+An error occurred while executing the following command: build app
+
+Diagnostic information:
+=======================
+                         app.archivePath : archive                                           
+                      app.bootstrap.base : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp
+                           app.build.dir : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/build/ShoppingApp
+                           app.classpath : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/app.js,C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/app
+                         app.cmd.version : 6.0.1.76                                          
+                          app.config.dir : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp\.sencha\app
+                   app.cordova.config.id : com.domain.ShoppingApp                            
+                 app.cordova.config.name : ShoppingApp                                       
+                 app.cordova.config.path : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/cordova
+               app.cordova.config.target :                                                   
+              app.cordova.config.verbose : false                                             
+                   app.cordova.js.0.path : cordova.js                                        
+               app.cordova.js.0.priority : 1000                                              
+                 app.cordova.js.0.remote : true                                              
+                   app.cordova.js.length : 1                                                 
+                 app.cordova.microloader : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp\.sencha\app/microloader/testing.js
+                 app.cordova.output.base : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/cordova/www
+         app.cordova.output.cache.enable : false                                             
+        app.cordova.output.deltas.enable : false                                             
+       app.cordova.output.manifest.embed : true                                              
+                                 app.dir : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp
+                           app.framework : touch                                             
+                   app.framework.version : 2.4.2.571                                         
+                                  app.id : c2b91714-a29c-47ad-88ff-d45894b78a9d              
+                       app.indexHtmlPath : index.html                                        
+                                app.name : ShoppingApp                                       
+                         app.output.base : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/build/${build.environment}/ShoppingApp
+           app.output.microloader.enable : true                                              
+                  app.phonegap.config.id : com.domain.ShoppingApp                            
+                app.phonegap.config.name : ShoppingApp                                       
+                app.phonegap.config.path : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/phonegap
+              app.phonegap.config.remote : false                                             
+             app.phonegap.config.verbose : false                                             
+                  app.phonegap.js.0.path : phonegap.js                                       
+              app.phonegap.js.0.priority : 1000                                              
+                app.phonegap.js.0.remote : true                                              
+                  app.phonegap.js.length : 1                                                 
+                app.phonegap.microloader : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp\.sencha\app/microloader/testing.js
+                app.phonegap.output.base : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/phonegap/www
+        app.phonegap.output.cache.enable : false                                             
+       app.phonegap.output.deltas.enable : false                                             
+      app.phonegap.output.manifest.embed : true                                              
+                      app.requires.names :                                                   
+                   app.requires.packages :                                                   
+                      app.resource.paths :                                                   
+        app.slicer.js.0.isWidgetManifest : true                                              
+                    app.slicer.js.0.path : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/sass/example/custom.js
+                    app.slicer.js.length : 1                                                 
+                    buildenvironment.dir : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp
+               buildenvironment.load.dir : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp
+                          cmd.config.dir : C:\Users\ME\bin\Sencha\Cmd\6.0.1.76               
+                                 cmd.dir : C:\Users\ME\bin\Sencha\Cmd\6.0.1.76               
+                    cmd.framework.minver : 2.2.0                                             
+                   cmd.framework.version : 2.99.99.99999                                     
+                            cmd.jvm.args : -Xms128m -Xmx1024m -Dapple.awt.UIElement=true     
+              cmd.merge.tool.args.araxis : -wait -merge -3 -a1 {base} {user} {generated} {out}
+              cmd.merge.tool.args.kdiff3 : {base} {user} {generated} -o {out}                
+             cmd.merge.tool.args.p4merge : {base} {user} {generated} {out}                   
+           cmd.merge.tool.args.smartsync : {user} {generated} {base}                         
+          cmd.merge.tool.args.sourcegear : --merge --result={out} {user} {base} {generated}  
+            cmd.merge.tool.args.tortoise : -base:{base} -theirs:{generated} -mine:{user} -merged:{out}
+                              cmd.minver : 3.0.0.0                                           
+                            cmd.platform : windows                                           
+                         cmd.server.port : 1841                                              
+                     cmd.unicode.escapes : C:\Users\ME\bin\Sencha\Cmd\6.0.1.76/unicode-escapes.json
+                             cmd.version : 6.0.1.76                                          
+                            cmd.web.port : 1841                                              
+                     config.skipDownload : true                                              
+                      config.skipInherit : false                                             
+                     framework.classpath : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp\touch/src
+                    framework.cmd.minver : 3.1.0.53                                          
+                   framework.cmd.version : 4.0.5.87                                          
+                    framework.config.dir : C:\Users\ME\bin\Sencha\Cmd\6.0.1.76\plugins\touch\2.3
+                           framework.dir : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp\touch
+                       framework.ignores : src/locale,src/platform,auth2/Auth.js,scroller/Infinite.js
+                          framework.name : touch                                             
+                  framework.packages.dir : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp\touch/packages
+             framework.preprocessor.opts : charts:no                                         
+                       framework.version : 2.4.2.571                                         
+                       inspector.address : http://localhost:1839/                            
+                          repo.local.dir : C:\Users\ME\bin\Sencha\Cmd\repo                   
+        system.java.net.useSystemProxies : true                                              
+                               touch.dir : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/touch
+                     workspace.build.dir : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/build
+                   workspace.cmd.version : 6.0.1.76                                          
+                    workspace.config.dir : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp\.sencha\workspace
+                           workspace.dir : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp
+                  workspace.packages.dir : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/packages/local,C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/packages
+              workspace.packages.extract : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/packages/remote
+                     workspace.theme.dir : C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/packages/local,C:\Users\ME\Documents\GitHub\SenchaApp\ShoppingApp/packages/${args.themeName}
+
+Exception information:
+=======================
+java.lang.NullPointerException
+     at java.io.File.<init>(Unknown Source)
+     at com.sencha.util.FileUtil.readFile(FileUtil.java:157)
+     at com.sencha.tools.compiler.jsb.projects.JsbBuilder.processBuild(JsbBuilder.java:29)
+     at com.sencha.command.build.JsbCommand.execute(JsbCommand.java:15)
+     at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+     at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+     at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+     at java.lang.reflect.Method.invoke(Unknown Source)
+     at com.sencha.util.MethodInvoker$Arguments.invoke(MethodInvoker.java:175)
+     at com.sencha.cli.Command.dispatch(Command.java:43)
+     at com.sencha.cli.Commands.dispatch(Commands.java:64)
+     at com.sencha.command.Sencha.dispatch(Sencha.java:74)
+     at com.sencha.command.Sencha.main(Sencha.java:142)
+     at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+     at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+     at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+     at java.lang.reflect.Method.invoke(Unknown Source)
+     at com.exe4j.runtime.LauncherEngine.launch(Unknown Source)
+     at com.exe4j.runtime.WinLauncher.main(Unknown Source)
+     at com.install4j.runtime.launcher.WinLauncher.main(Unknown Source)
+
